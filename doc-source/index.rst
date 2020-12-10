@@ -116,15 +116,10 @@ Installation
 
 .. toctree::
 	:maxdepth: 3
-	:caption: API Reference
-	:glob:
+	:caption: Documentation
 
-	api/*
-
-.. toctree::
-	:maxdepth: 3
-	:caption: Contributing
-
+	usage
+	api
 	contributing
 	Source
 
