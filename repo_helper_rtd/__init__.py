@@ -45,6 +45,9 @@ __license__: str = "MIT License"
 __version__: str = "0.0.0"
 __email__: str = "dominic@davis-foster.co.uk"
 
+# Makes the docs link correctly
+requests.Response.__module__ = "requests"
+
 
 class ReadTheDocsManager(RepoHelper):
 	"""
