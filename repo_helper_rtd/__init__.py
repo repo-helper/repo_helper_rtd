@@ -30,14 +30,12 @@ Manage ReadTheDocs documentation with ``repo-helper``.
 from typing import Dict, Optional, Union
 
 # 3rd party
-import requests
+from apeye import RequestsURL
 from click.globals import resolve_color_default
 from domdf_python_tools.secrets import Secret
 from domdf_python_tools.typing import PathLike
 from repo_helper.core import RepoHelper
 from requests import Response
-
-__all__ = ["ReadTheDocsManager"]
 
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2020 Dominic Davis-Foster"
@@ -45,8 +43,28 @@ __license__: str = "MIT License"
 __version__: str = "0.0.0"
 __email__: str = "dominic@davis-foster.co.uk"
 
+__all__ = ["ReadTheDocsManager"]
+
 # Makes the docs link correctly
-requests.Response.__module__ = "requests"
+Response.__module__ = "requests"
+
+
+class RequestsURLTS(RequestsURL):
+	"""
+	Extension of :class:`~apeye.requests_url.RequestsURL` which adds a trailing slash to the end of the URL.
+
+	:param url: The url to construct the :class:`~apeye.url.URL` object from.
+	"""
+
+	def __str__(self) -> str:
+		"""
+		Returns the :class:`~.RequestsURLTS` as a string.
+		"""
+
+		return super().__str__() + '/'
+
+
+RTD_API = RequestsURLTS("https://readthedocs.org/api/v3")
 
 
 class ReadTheDocsManager(RepoHelper):
@@ -106,8 +124,7 @@ class ReadTheDocsManager(RepoHelper):
 		body = self.get_update_json()
 		body["name"] = self.templates.globals["repo_name"].lower()
 
-		return requests.post(
-				f"https://readthedocs.org/api/v3/projects/",
+		return (RTD_API / "projects").post(
 				json=body,
 				headers={"Authorization": f"Token {self.token.value}"},
 				)
@@ -119,8 +136,7 @@ class ReadTheDocsManager(RepoHelper):
 
 		rtfd_name = self.templates.globals["repo_name"].lower()
 
-		return requests.patch(
-				f"https://readthedocs.org/api/v3/projects/{rtfd_name}/",
+		return (RTD_API / "projects" / rtfd_name).patch(
 				json=self.get_update_json(),
 				headers={"Authorization": f"Token {self.token.value}"},
 				)
