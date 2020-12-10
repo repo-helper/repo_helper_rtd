@@ -134,7 +134,7 @@ class ReadTheDocsManager(RepoHelper):
 		Update this project on ReadTheDocs.
 		"""
 
-		rtfd_name = self.templates.globals["repo_name"].lower()
+		rtfd_name = self.templates.globals["repo_name"].lower().replace("_", "-")
 
 		return (RTD_API / "projects" / rtfd_name).patch(
 				json=self.get_update_json(),
