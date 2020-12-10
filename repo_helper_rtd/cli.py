@@ -32,6 +32,7 @@ from functools import partial
 from typing import Optional
 
 # 3rd party
+import click
 from consolekit import CONTEXT_SETTINGS
 from consolekit.options import colour_option, version_option
 from repo_helper.cli import cli_group
@@ -72,9 +73,16 @@ def new(token: str, colour: Optional[bool] = None):
 	# this package
 	from repo_helper_rtd import ReadTheDocsManager
 
-	response = ReadTheDocsManager(token, PathPlus.cwd(), colour=colour).new()
+	manager = ReadTheDocsManager(token, PathPlus.cwd(), colour=colour)
+	response = manager.new()
 
-	sys.exit(response.status_code != 200)
+	print(response)
+	if response.status_code // 100 == 2:
+		project_name = manager.templates.globals["repo_name"].lower().replace('_', '-')
+		click.echo(f"Success! View the project page at https://readthedocs.org/projects/{project_name}")
+		sys.exit(0)
+
+	sys.exit(1)
 
 
 @colour_option()
@@ -93,4 +101,9 @@ def update(token: str, colour: Optional[bool] = None):
 
 	response = ReadTheDocsManager(token, PathPlus.cwd(), colour=colour).update()
 
-	sys.exit(response.status_code != 200)
+	print(response)
+	if response.status_code // 100 == 2:
+		click.echo("Up to date!")
+		sys.exit(0)
+
+	sys.exit(1)
