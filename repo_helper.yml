@@ -26,6 +26,7 @@ python_versions:
 
 keywords:
  - rtd
+ - readthedocs
  - repo-helper
 
 extra_sphinx_extensions:
