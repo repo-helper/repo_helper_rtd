@@ -30,7 +30,7 @@ Manage ReadTheDocs documentation with ``repo-helper``.
 from typing import Dict, Optional, Union
 
 # 3rd party
-from apeye import RequestsURL
+from apeye.requests_url import TrailingRequestsURL
 from click.globals import resolve_color_default
 from domdf_python_tools.secrets import Secret
 from domdf_python_tools.typing import PathLike
@@ -48,23 +48,7 @@ __all__ = ["ReadTheDocsManager"]
 # Makes the docs link correctly
 Response.__module__ = "requests"
 
-
-class RequestsURLTS(RequestsURL):
-	"""
-	Extension of :class:`~apeye.requests_url.RequestsURL` which adds a trailing slash to the end of the URL.
-
-	:param url: The url to construct the :class:`~apeye.url.URL` object from.
-	"""
-
-	def __str__(self) -> str:
-		"""
-		Returns the :class:`~.RequestsURLTS` as a string.
-		"""
-
-		return super().__str__() + '/'
-
-
-RTD_API = RequestsURLTS("https://readthedocs.org/api/v3")
+RTD_API = TrailingRequestsURL("https://readthedocs.org/api/v3")
 
 
 class ReadTheDocsManager(RepoHelper):
