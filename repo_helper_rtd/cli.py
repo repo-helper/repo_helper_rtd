@@ -74,14 +74,15 @@ def new(token: str, colour: Optional[bool] = None):
 	from repo_helper_rtd import ReadTheDocsManager
 
 	manager = ReadTheDocsManager(token, PathPlus.cwd(), colour=colour)
+	manager.load_settings()
 	response = manager.new()
 
-	print(response)
 	if response.status_code // 100 == 2:
 		project_name = manager.templates.globals["repo_name"].lower().replace('_', '-')
 		click.echo(f"Success! View the project page at https://readthedocs.org/projects/{project_name}")
 		sys.exit(0)
 
+	print(response)
 	sys.exit(1)
 
 
@@ -99,11 +100,13 @@ def update(token: str, colour: Optional[bool] = None):
 	# this package
 	from repo_helper_rtd import ReadTheDocsManager
 
-	response = ReadTheDocsManager(token, PathPlus.cwd(), colour=colour).update()
+	manager = ReadTheDocsManager(token, PathPlus.cwd(), colour=colour)
+	manager.load_settings()
+	response = manager.update()
 
-	print(response)
 	if response.status_code // 100 == 2:
 		click.echo("Up to date!")
 		sys.exit(0)
 
+	print(response)
 	sys.exit(1)
