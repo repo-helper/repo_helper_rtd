@@ -85,6 +85,7 @@ class ReadTheDocsManager(RepoHelper):
 
 		self.token = Secret(token)
 		self.colour = resolve_color_default(colour)
+		self.load_settings()
 
 	def get_update_json(self) -> Dict[str, Union[Dict[str, str], str]]:
 		"""
