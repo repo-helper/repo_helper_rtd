@@ -1,6 +1,6 @@
 [build-system]
-requires = [ "setuptools>=40.6.0", "wheel>=0.34.2",]
-build-backend = "setuptools.build_meta"
+requires = [ "whey",]
+build-backend = "whey"
 
 [project]
 name = "repo_helper_rtd"
@@ -15,13 +15,6 @@ email = "dominic@davis-foster.co.uk"
 name = "Dominic Davis-Foster"
 
 
-[tool.importcheck]
-
-[tool.mkrecipe]
-conda-channels = [ "repo-helper",]
-extras = "all"
-license-key = "MIT"
-
 [project.license]
 file = "LICENSE"
 
@@ -30,6 +23,20 @@ Homepage = "https://github.com/repo-helper/repo_helper_rtd"
 "Issue Tracker" = "https://github.com/repo-helper/repo_helper_rtd/issues"
 "Source Code" = "https://github.com/repo-helper/repo_helper_rtd"
 Documentation = "https://repo_helper_rtd.readthedocs.io/en/latest"
+
+[tool.importcheck]
+
+[tool.mkrecipe]
+conda-channels = [ "repo-helper",]
+extras = "all"
+license-key = "MIT"
+
+[tool.whey]
+base-classifiers = []
+python-versions = [ "3.6", "3.7", "3.8", "3.9",]
+python-implementations = [ "CPython",]
+platforms = [ "Windows", "macOS", "Linux",]
+license-key = "MIT"
 
 [project.entry-points."repo_helper.command"]
 repo_helper_rtd = "repo_helper_rtd.cli:rtd"

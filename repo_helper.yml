@@ -10,6 +10,7 @@ version: '0.1.0'
 license: 'MIT'
 short_desc: "Manage ReadTheDocs documentation with repo-helper."
 
+use_whey: true
 enable_conda: False
 enable_tests: False
 
