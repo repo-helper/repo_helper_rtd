@@ -25,6 +25,7 @@ Homepage = "https://github.com/repo-helper/repo_helper_rtd"
 Documentation = "https://repo_helper_rtd.readthedocs.io/en/latest"
 
 [tool.importcheck]
+always = [ "repo_helper_rtd",]
 
 [tool.mkrecipe]
 conda-channels = [ "repo-helper",]
