@@ -50,3 +50,6 @@ exclude_files:
 sphinx_conf_epilogue:
  - nitpicky = True
  - autosummary_widths_builders = ["latex"]
+
+mypy_deps:
+ - types-requests

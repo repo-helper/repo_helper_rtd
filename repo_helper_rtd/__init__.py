@@ -31,7 +31,7 @@ from typing import Dict, Optional, Union
 
 # 3rd party
 from apeye.requests_url import TrailingRequestsURL
-from click.globals import resolve_color_default
+from click.globals import resolve_color_default  # type: ignore
 from domdf_python_tools.secrets import Secret
 from domdf_python_tools.typing import PathLike
 from repo_helper.core import RepoHelper
