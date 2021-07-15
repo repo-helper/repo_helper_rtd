@@ -13,6 +13,8 @@ short_desc: "Manage ReadTheDocs documentation with repo-helper."
 use_whey: true
 enable_conda: False
 enable_tests: False
+sphinx_html_theme: furo
+mypy_version: "0.910"
 
 entry_points:
  repo_helper.command:
@@ -32,13 +34,19 @@ keywords:
 
 extra_sphinx_extensions:
  - sphinx_click
+ - sphinx_toolbox_experimental.html_section
+ - sphinx_toolbox_experimental.autosummary_widths
+ - sphinx_toolbox_experimental.needspace
 
 intersphinx_mapping:
  - "'click': ('https://click.palletsprojects.com/en/7.x/', None)"
 
-sphinx_html_theme: furo
-
-standalone_contrib_guide: true
-
 additional_ignore:
  - update_all.py
+
+exclude_files:
+ - contributing
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - autosummary_widths_builders = ["latex"]
