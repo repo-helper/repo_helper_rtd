@@ -19,6 +19,9 @@ new
 	:prog: repo-helper rtd new
 	:nested: none
 
+
+.. latex:clearpage::
+
 update
 *******
 

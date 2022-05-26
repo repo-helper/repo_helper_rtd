@@ -35,9 +35,8 @@ keywords:
 
 extra_sphinx_extensions:
  - sphinx_click
- - sphinx_toolbox_experimental.html_section
- - sphinx_toolbox_experimental.autosummary_widths
- - sphinx_toolbox_experimental.needspace
+ - sphinx_toolbox.more_autosummary.column_widths
+ - sphinx_toolbox.latex
 
 intersphinx_mapping:
  - "'click': ('https://click.palletsprojects.com/en/7.x/', None)"
@@ -50,7 +49,7 @@ exclude_files:
 
 sphinx_conf_epilogue:
  - nitpicky = True
- - autosummary_widths_builders = ["latex"]
+ - needspace_amount = r"5\baselineskip"
 
 mypy_deps:
  - types-requests
