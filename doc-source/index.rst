@@ -58,8 +58,8 @@ repo_helper_rtd
 		:workflow: mypy
 		:alt: mypy status
 
-	.. |requires| image:: https://dependency-dash.herokuapp.com/github/repo-helper/repo_helper_rtd/badge.svg
-		:target: https://dependency-dash.herokuapp.com/github/repo-helper/repo_helper_rtd/
+	.. |requires| image:: https://dependency-dash.repo-helper.uk/github/repo-helper/repo_helper_rtd/badge.svg
+		:target: https://dependency-dash.repo-helper.uk/github/repo-helper/repo_helper_rtd/
 		:alt: Requirements Status
 
 	.. |codefactor| codefactor-shield::
