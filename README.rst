@@ -87,7 +87,7 @@ repo_helper_rtd
 .. |language| image:: https://img.shields.io/github/languages/top/repo-helper/repo_helper_rtd
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/repo-helper/repo_helper_rtd/v0.1.0
+.. |commits-since| image:: https://img.shields.io/github/commits-since/repo-helper/repo_helper_rtd/v0.1.1
 	:target: https://github.com/repo-helper/repo_helper_rtd/pulse
 	:alt: GitHub commits since tagged version
 
