@@ -28,8 +28,8 @@ repo_helper_rtd
 	* - Other
 	  - |license| |language| |requires|
 
-.. |docs| image:: https://img.shields.io/readthedocs/repo_helper_rtd/latest?logo=read-the-docs
-	:target: https://repo_helper_rtd.readthedocs.io/en/latest
+.. |docs| image:: https://img.shields.io/readthedocs/repo-helper-rtd/latest?logo=read-the-docs
+	:target: https://repo-helper-rtd.readthedocs.io/en/latest
 	:alt: Documentation Build Status
 
 .. |docs_check| image:: https://github.com/repo-helper/repo_helper_rtd/workflows/Docs%20Check/badge.svg
@@ -95,7 +95,7 @@ repo_helper_rtd
 	:target: https://github.com/repo-helper/repo_helper_rtd/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2023
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/repo_helper_rtd
