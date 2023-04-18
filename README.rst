@@ -28,8 +28,8 @@ repo_helper_rtd
 	* - Other
 	  - |license| |language| |requires|
 
-.. |docs| image:: https://img.shields.io/readthedocs/repo_helper_rtd/latest?logo=read-the-docs
-	:target: https://repo_helper_rtd.readthedocs.io/en/latest
+.. |docs| image:: https://img.shields.io/readthedocs/repo-helper-rtd/latest?logo=read-the-docs
+	:target: https://repo-helper-rtd.readthedocs.io/en/latest
 	:alt: Documentation Build Status
 
 .. |docs_check| image:: https://github.com/repo-helper/repo_helper_rtd/workflows/Docs%20Check/badge.svg

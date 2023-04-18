@@ -31,7 +31,7 @@ repo_helper_rtd
 		  - |license| |language| |requires|
 
 	.. |docs| rtfd-shield::
-		:project: repo_helper_rtd
+		:project: repo-helper-rtd
 		:alt: Documentation Build Status
 
 	.. |docs_check| actions-shield::
