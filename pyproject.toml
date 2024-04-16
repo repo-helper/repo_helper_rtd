@@ -14,7 +14,6 @@ dynamic = [ "requires-python", "classifiers", "dependencies",]
 name = "Dominic Davis-Foster"
 email = "dominic@davis-foster.co.uk"
 
-
 [project.license]
 file = "LICENSE"
 
@@ -23,6 +22,9 @@ Homepage = "https://github.com/repo-helper/repo_helper_rtd"
 "Issue Tracker" = "https://github.com/repo-helper/repo_helper_rtd/issues"
 "Source Code" = "https://github.com/repo-helper/repo_helper_rtd"
 Documentation = "https://repo-helper-rtd.readthedocs.io/en/latest"
+
+[project.entry-points."repo_helper.command"]
+repo_helper_rtd = "repo_helper_rtd.cli:rtd"
 
 [tool.importcheck]
 always = [ "repo_helper_rtd", "repo_helper_rtd.cli", "repo_helper_rtd.options",]
@@ -55,7 +57,6 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinxcontrib.extras_require",
     "sphinx.ext.todo",
-    "sphinxemoji.sphinxemoji",
     "notfound.extension",
     "sphinx_copybutton",
     "sphinxcontrib.default_values",
@@ -67,7 +68,6 @@ extensions = [
     "sphinx_toolbox.more_autosummary.column_widths",
     "sphinx_toolbox.latex",
 ]
-sphinxemoji_style = "twemoji"
 gitstamp_fmt = "%d %b %Y"
 templates_path = [ "_templates",]
 html_static_path = [ "_static",]
@@ -127,16 +127,6 @@ show_error_codes = true
 [tool.snippet-fmt]
 directives = [ "code-block",]
 
-[project.entry-points."repo_helper.command"]
-repo_helper_rtd = "repo_helper_rtd.cli:rtd"
-
-[tool.dependency-dash."requirements.txt"]
-order = 10
-
-[tool.dependency-dash."doc-source/requirements.txt"]
-order = 30
-include = false
-
 [tool.snippet-fmt.languages.python]
 reformat = true
 
@@ -146,3 +136,10 @@ reformat = true
 [tool.snippet-fmt.languages.ini]
 
 [tool.snippet-fmt.languages.json]
+
+[tool.dependency-dash."requirements.txt"]
+order = 10
+
+[tool.dependency-dash."doc-source/requirements.txt"]
+order = 30
+include = false
