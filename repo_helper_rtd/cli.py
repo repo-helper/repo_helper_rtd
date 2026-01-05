@@ -32,7 +32,7 @@ from functools import partial
 from typing import Optional
 
 # 3rd party
-import click   # type: ignore[import]
+import click  # type: ignore[import-untyped]
 from consolekit import CONTEXT_SETTINGS
 from consolekit.options import colour_option, version_option
 from repo_helper.cli import cli_group

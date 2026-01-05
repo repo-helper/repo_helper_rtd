@@ -30,7 +30,7 @@ Reusable options for click.
 from typing import Any, Callable
 
 # 3rd party
-import click   # type: ignore[import]
+import click  # type: ignore[import-untyped]
 from domdf_python_tools.stringlist import DelimitedList
 
 __all__ = ["token_option", "version_callback"]
