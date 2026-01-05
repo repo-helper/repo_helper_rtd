@@ -27,21 +27,6 @@ lines_between_types = 0
 use_parentheses = true
 remove_redundant_aliases = true
 default_section = "THIRDPARTY"
-known_third_party = [
-    "apeye",
-    "click",
-    "consolekit",
-    "domdf_python_tools",
-    "dulwich",
-    "github",
-    "pygithub",
-    "pynacl",
-    "repo_helper",
-    "requests",
-    "southwark",
-    "typing_extensions",
-    "virtualenv",
-]
 known_first_party = [ "repo_helper_rtd",]
 
 [config]
