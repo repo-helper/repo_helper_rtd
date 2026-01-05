@@ -32,7 +32,7 @@ from functools import partial
 from typing import Optional
 
 # 3rd party
-import click  # type: ignore
+import click   # type: ignore[import]
 from consolekit import CONTEXT_SETTINGS
 from consolekit.options import colour_option, version_option
 from repo_helper.cli import cli_group
@@ -50,7 +50,7 @@ __all__ = [
 
 @version_option(version_callback)
 @cli_group(invoke_without_command=False)
-def rtd():
+def rtd() -> None:
 	"""
 	Manage a ReadTheDocs project.
 	"""
@@ -62,7 +62,7 @@ rtd_command = partial(rtd.command, context_settings=CONTEXT_SETTINGS)
 @colour_option()
 @token_option()
 @rtd_command()
-def new(token: str, colour: Optional[bool] = None):
+def new(token: str, colour: Optional[bool] = None) -> None:
 	"""
 	Create a new ReadTheDocs project.
 	"""
@@ -89,7 +89,7 @@ def new(token: str, colour: Optional[bool] = None):
 @colour_option()
 @token_option()
 @rtd_command()
-def update(token: str, colour: Optional[bool] = None):
+def update(token: str, colour: Optional[bool] = None) -> None:
 	"""
 	Update the ReadTheDocs project.
 	"""

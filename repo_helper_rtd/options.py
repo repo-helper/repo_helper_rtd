@@ -27,10 +27,10 @@ Reusable options for click.
 #
 
 # stdlib
-from typing import Callable
+from typing import Any, Callable
 
 # 3rd party
-import click  # type: ignore
+import click   # type: ignore[import]
 from domdf_python_tools.stringlist import DelimitedList
 
 __all__ = ["token_option", "version_callback"]
@@ -56,7 +56,7 @@ def token_option(token_var: str = "RTD_TOKEN") -> Callable:  # nosec: B107
 			)
 
 
-def version_callback(ctx, param, value):  # noqa: D103
+def version_callback(ctx: click.Context, param: Any, value: int) -> None:  # noqa: D103
 	# 3rd party
 	import repo_helper
 
