@@ -99,7 +99,7 @@ repo_helper_rtd
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/repo_helper_rtd
-	:target: https://pypi.org/project/repo_helper_rtd/
+	:target: https://pypistats.org/packages/repo_helper_rtd
 	:alt: PyPI - Downloads
 
 .. end shields
