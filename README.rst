@@ -115,6 +115,6 @@ To install with ``pip``:
 
 .. code-block:: bash
 
-	$ python -m pip install repo_helper_rtd
+	$ python -m pip install repo-helper-rtd
 
 .. end installation

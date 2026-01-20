@@ -118,6 +118,7 @@ Installation
 
 .. installation:: repo_helper_rtd
 	:pypi:
+	:pypi-name: repo-helper-rtd
 	:github:
 
 .. end installation
