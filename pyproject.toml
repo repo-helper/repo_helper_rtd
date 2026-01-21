@@ -3,7 +3,7 @@ requires = [ "whey",]
 build-backend = "whey"
 
 [project]
-name = "repo_helper_rtd"
+name = "repo-helper-rtd"
 version = "0.1.1"
 description = "Manage ReadTheDocs documentation with repo-helper."
 readme = "README.rst"
@@ -35,6 +35,7 @@ python-versions = [ "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "3.13",]
 python-implementations = [ "CPython",]
 platforms = [ "Windows", "macOS", "Linux",]
 license-key = "MIT"
+package = "repo_helper_rtd"
 
 [tool.sphinx-pyproject]
 github_username = "repo-helper"
