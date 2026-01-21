@@ -66,22 +66,22 @@ repo_helper_rtd
 		:alt: CodeFactor Grade
 
 	.. |pypi-version| pypi-shield::
-		:project: repo_helper_rtd
+		:project: repo-helper-rtd
 		:version:
 		:alt: PyPI - Package Version
 
 	.. |supported-versions| pypi-shield::
-		:project: repo_helper_rtd
+		:project: repo-helper-rtd
 		:py-versions:
 		:alt: PyPI - Supported Python Versions
 
 	.. |supported-implementations| pypi-shield::
-		:project: repo_helper_rtd
+		:project: repo-helper-rtd
 		:implementations:
 		:alt: PyPI - Supported Implementations
 
 	.. |wheel| pypi-shield::
-		:project: repo_helper_rtd
+		:project: repo-helper-rtd
 		:wheel:
 		:alt: PyPI - Wheel
 
@@ -105,7 +105,7 @@ repo_helper_rtd
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
-		:project: repo_helper_rtd
+		:project: repo-helper-rtd
 		:downloads: month
 		:alt: PyPI - Downloads
 
